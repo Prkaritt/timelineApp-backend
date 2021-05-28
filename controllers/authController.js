@@ -49,7 +49,7 @@ export const signUp = async (req, res) => {
       status: "success",
       message: "New Account created",
       token,
-      newUser,
+      user: newUser,
     });
   } catch (error) {
     res.status(400).json({
