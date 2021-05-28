@@ -6,11 +6,10 @@ import mongoose from "mongoose";
 
 const app = express();
 dotenv.config();
-
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
-app.use("/user/", userRouter);
+app.use("/user", userRouter);
 app.get("/", (req, res) => {
   res.send("WELCOME TO MY PROGRESS API");
 });
@@ -28,5 +27,5 @@ mongoose
     });
   })
   .catch((error) => {
-    console.log(error);
+    console.log(error.message);
   });
