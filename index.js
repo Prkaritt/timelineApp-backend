@@ -23,7 +23,7 @@ mongoose
     useNewUrlParser: true,
   })
   .then(() => {
-    app.listen(5000, () => {
+    app.listen(port, () => {
       console.log(`The server is running on port ${port}`);
     });
   })
