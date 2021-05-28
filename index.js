@@ -9,11 +9,11 @@ dotenv.config();
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/user/", userRouter);
 app.get("/", (req, res) => {
   res.send("WELCOME TO MY PROGRESS API");
 });
-
-app.use("/user/", userRouter);
 
 const port = process.env.PORT || 5000;
 
